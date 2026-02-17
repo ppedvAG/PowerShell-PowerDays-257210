@@ -27,3 +27,21 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 - Module
 - Variablen
 - Operationen
+- PipeLine1
+- Formatierung  der Ausgabe mit
+    ```powershell
+    Format-Tabe
+    Format-List
+    Format-Wide
+    ```
+- Einfache Ausgabe
+    ```powershell
+    Out-Host
+    Out-File
+    Out-Printer
+    ```
+- PipeLine1
+- Sortieren 
+- Messen
+- Selektieren
+- Pipeline 2
