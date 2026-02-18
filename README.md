@@ -5,7 +5,7 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 
 [Kursblatt Fortgeschritten](https://ppedv.de/schulung/kurse/PowerShellCorecmdletScriptlernenFortgeschrittenWorkflowProgrammierungSeminarTraining)
 
-### Agenda:
+### Agenda PowerShell Grundlagen:
 - Einführung
     - PowerShell Versionen
         - **5**, 6, 7
@@ -49,3 +49,8 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 - Filtern
 - Aufzählen
 - Schleifen
+- Verzweigung
+- Pipeline2
+- Variablen2
+- WMI / CIM
+
