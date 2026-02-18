@@ -45,3 +45,7 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 - Messen
 - Selektieren
 - Pipeline 2
+- Konvertieren / Importieren / Exportieren
+- Filtern
+- Aufzählen
+- Schleifen
