@@ -28,9 +28,11 @@ Get-EventLog.ps1  -EventId 4624
 [cmdletBinding()]
 param(
 [Parameter(Mandatory=$true)]
+[ValidateSet(4624,4625,4634)]
 [int]$EventId,
 
-[int]$Newest = 10,
+[ValidateRange(5,20)]
+[int]$Newest = 3,
 
 [string]$Computername = "localhost"
 )
