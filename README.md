@@ -61,7 +61,8 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
   - Parameter
   - Validates
   - Comment Based Help
-  - Fehlerbehandlung    
+  - Fehlerbehandlung   
+  - Fehlermeldungen erzeugen
   - Functions
   - SkriptModule
   - Modulmanifest
