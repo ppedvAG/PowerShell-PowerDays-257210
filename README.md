@@ -30,7 +30,7 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 - PipeLine1
 - Formatierung  der Ausgabe mit
     ```powershell
-    Format-Tabe
+    Format-Table
     Format-List
     Format-Wide
     ```
@@ -54,3 +54,5 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 - Variablen2
 - WMI / CIM
 
+### Agenda PowerShell Fortgeschritten:
+- Git
