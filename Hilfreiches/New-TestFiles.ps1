@@ -59,9 +59,8 @@ if(Test-Path -Path $TestFilesDirPath -PathType Container)
     }
     else
     {
-        #ToDo: schöner machen
-        Write-Host -ForegroundColor Red -Object "Ordner bereits vorhanden"
-        exit
+        Write-Error -Message "Der Ordner ist bereits vorhanden" -ErrorAction Stop
+        throw "Der Ordner ist bereits vorhanden"
     }
 }
 
