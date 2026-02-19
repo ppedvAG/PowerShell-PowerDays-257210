@@ -56,3 +56,12 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
 
 ### Agenda PowerShell Fortgeschritten:
 - Git
+- Skriptsicherheit
+- Scripting
+  - Parameter
+  - Validates
+  - Comment Based Help
+  - Fehlerbehandlung    
+  - Functions
+  - SkriptModule
+  - Modulmanifest
