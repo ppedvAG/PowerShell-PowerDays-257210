@@ -45,3 +45,73 @@ function Test-Datei
         "Fehler ist aufgetreten"
     }
 }
+
+function Test-PipeLineInput
+{
+[cmdletBinding()]
+param(
+[Parameter(ValueFromPipeLine = $true, ValueFromPipeLineByPropertyName = $true)]
+[string]$Name,
+
+[Parameter(ValueFromPipeLineByPropertyName = $true)]
+[string]$Status
+)
+
+    "Name: $Name Status:$Status" 
+
+}
+
+function Test-BeginProcessEnd
+{
+param(
+[Parameter(ValueFromPipeLine = $true, ValueFromPipeLineByPropertyName = $true)]
+[string]$Name,
+
+[Parameter(ValueFromPipeLineByPropertyName = $true)]
+[string]$Status
+)
+    Begin
+    {
+        Write-Verbose -Message "Der Begin Block wird einmal zum Start ausgeführt und kann verwendet werden z.B. zum initialiseren von Variablen oder Importieren von Modulen. "
+    }
+    Process
+    {
+        #Wird für jedes übergebene Objekt ausgeführt
+        "Name: $Name Status:$Status" 
+    }
+    End
+    {
+        Write-Verbose -Message "Wird einmal zum Schluss ausgeführt"
+    }
+}
+
+function Out-Voice
+{
+[cmdletBinding()]
+param(
+[Parameter(Mandatory=$true,ValueFromPipeLine = $true)]
+[string]$Message
+)
+
+    Begin
+    {
+        Add-Type -AssemblyName System.Speech
+        $speaker = New-Object -TypeName System.Speech.Synthesis.SpeechSynthesizer
+
+        $audiosrv = Get-Service -Name Audiosrv
+        if($audiosrv.Status -ne "Running")
+        {
+            $audiosrv.Start()
+        }
+        $speaker.SelectVoice("Microsoft Zira Desktop")
+    }
+    Process
+    {
+        $speaker.Rate
+        $speaker.Speak($Message)
+    }
+    End
+    {
+        $speaker.Dispose()
+    }
+}

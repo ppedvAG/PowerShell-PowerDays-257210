@@ -66,3 +66,12 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
   - Functions
   - SkriptModule
   - Modulmanifest
+  - Pipelinefähigkeit
+  - Beginn Process End
+  - PowerShell Profile
+- DSC
+- PowerShell Klassen
+- PowerShell Enumerations
+- .Net Objekten
+- Strict Mode
+
