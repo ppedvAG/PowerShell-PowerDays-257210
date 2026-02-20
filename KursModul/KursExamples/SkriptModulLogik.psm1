@@ -109,9 +109,47 @@ param(
     {
         $speaker.Rate
         $speaker.Speak($Message)
+        $speaker.sp
     }
     End
     {
         $speaker.Dispose()
     }
+}
+
+function Test-ParameterSet
+{
+ [cmdletBinding(DefaultParameterSetName="UseCase1")]
+ param(
+    [Parameter(Mandatory=$true,ParameterSetName="UseCase1")]
+    [string]$param1,
+
+    [Parameter(Mandatory=$true,ParameterSetName="UseCase2")]
+    [string]$param2,
+
+    [Parameter(Mandatory=$true,ParameterSetName="UseCase1",HelpMessage="Begrüßung")]
+    [Parameter(Mandatory=$false,ParameterSetName="UseCase2")]
+    [string]$param3
+ )
+    Write-Host -Object ("Folgendes ParameterSet wurde verwendet: " + $PSCmdlet.ParameterSetName)
+    Write-Host -Object "Param1: $param1"
+    Write-Host -Object "Param2: $param2"
+    Write-Host -Object "Param3: $param3"
+}
+
+function Test-CredentialParam
+{
+[cmdletBinding()]
+param(
+    [Parameter(Mandatory=$true)]
+    [System.Management.Automation.Credential()]
+    [System.Management.Automation.PSCredential]
+    $Credential = [System.Management.Automation.PSCredential]::Empty,
+
+    [Parameter()]
+    [string]$Computername = "Member1"
+)
+
+    Invoke-Command -ComputerName $Computername -Credential $Credential -ScriptBlock {Restart-Computer -Force}
+
 }

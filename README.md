@@ -69,9 +69,12 @@ KursRepository zu Kurs PowerShell Days - kompakt in 4 Tagen der ppedv AG
   - Pipelinefähigkeit
   - Beginn Process End
   - PowerShell Profile
+  - ParameterSet
+  - Credential Parameter
 - DSC
 - PowerShell Klassen
 - PowerShell Enumerations
 - .Net Objekten
 - Strict Mode
+
 
